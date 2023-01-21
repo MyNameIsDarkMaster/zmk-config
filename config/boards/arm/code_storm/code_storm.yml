@@ -1,0 +1,12 @@
+file_format: "1"
+id: code_storm
+name: code_storm
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+  - backlight
+outputs:
+  - usb
+  - ble
