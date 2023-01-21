@@ -19,7 +19,7 @@
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart;
-		zmk,backlight = backlight0;
+		zmk,backlight = &backlight0;
 	};
 		sensors {
 		compatible = "zmk,keymap-sensors";
