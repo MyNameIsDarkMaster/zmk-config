@@ -19,6 +19,8 @@
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart;
+		zmk,backlight = backlight0;
+		zmk,keymap-sensors = sensors;
 	};
 		sensors {
 		compatible = "zmk,keymap-sensors";
@@ -77,7 +79,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
         status = "disabled";
     };
 	
-    backlight: pwmleds {
+    backlight0: pwmleds {
 		compatible = "pwm-leds";
 		label = "Backlight LEDs";
 		pwm_led_0 {
