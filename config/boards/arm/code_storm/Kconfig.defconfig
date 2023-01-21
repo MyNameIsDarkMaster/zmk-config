@@ -4,7 +4,7 @@
 if BOARD_CODE_STORM
 
 config ZMK_KEYBOARD_NAME
-	default "CODE_STORM"
+	default "CodeStorm"
 
 if USB_DEVICE_STACK
 
