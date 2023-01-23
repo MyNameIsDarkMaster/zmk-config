@@ -93,15 +93,18 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 		pwm_led_3 {
 			pwms = <&pwm0 25>; /* LED 4 */
 		};
-	};
-
-	leds {
-		compatible = "gpio-leds";
-		blue_led: led_0 {
-			gpios = <&gpio0 26  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-			label = "Blue LED";
+		pwm_led_4 {
+			pwms = <&pwm0 26>; /* LED System */
 		};
 	};
+
+//	leds {
+//		compatible = "gpio-leds";
+//		blue_led: led_0 {
+//			gpios = <&gpio0 26  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//			label = "Blue LED";
+//		};
+//	};
 
 
 	vbatt {
@@ -141,6 +144,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	ch1-pin = <15>;
 	ch2-pin = <27>;
 	ch3-pin = <25>;
+	ch4-pin = <26>;
     /* ch0-inverted; */
 };
 
