@@ -75,7 +75,6 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
         a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
-        status = "disabled";
     };
 	
     backlight0: pwmleds {
@@ -91,7 +90,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 			pwms = <&pwm0 27>; /* LED 3 */
 		};
 		pwm_led_3 {
-			pwms = <&pwm0 26>; /* LED 4 */
+			pwms = <&pwm0 25>; /* LED 4 */
 		};
 	};
 
@@ -100,6 +99,10 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 		blue_led: led_0 {
 			gpios = <&gpio0 20  GPIO_ACTIVE_HIGH>;
 			label = "Blue LED";
+		};
+		green_led: led_1 {
+			gpios = <&gpio0 26  GPIO_ACTIVE_HIGH>;
+			label = "Green LED";
 		};
 	};
 
@@ -140,10 +143,9 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
     ch0-pin = <24>;
 	ch1-pin = <15>;
 	ch2-pin = <27>;
-	ch3-pin = <26>;
+	ch3-pin = <25>;
     /* ch0-inverted; */
 };
-
 
 &usbd {
     status = "okay";

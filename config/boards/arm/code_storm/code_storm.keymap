@@ -35,9 +35,9 @@
     &kp GRAVE  &kp Q     &kp W     &kp E     &kp R     &kp T             &kp Y      &kp U   &kp I      &kp O     &kp P      &kp MINUS  &kp EQUAL
     &kp BSLH   &kp A     &kp S     &kp D     &kp F     &kp G             &kp H      &kp J   &kp K      &kp L     &kp SEMI   &kp SQT    &kp ENTER 
     &kp TAB    &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp UP
-    &kp LCTRL  &kp LALT  &kp DEL   &mo FNL       &kp SPACE                   &kp LSHIFT     &kp LBKT   &kp RBKT  &kp LEFT   &kp DOWN   &kp RIGHT	
-	>;
-
+    &kp LCTRL  &kp LALT  &kp DEL   &mo FNL      &kp LSHIFT                   &kp SPACE    &kp LBKT   &kp RBKT  &kp LEFT   &kp DOWN   &kp RIGHT	
+	>
+	
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 		
@@ -52,12 +52,12 @@
             bindings = <
  &kp K_COFFEE  &kp F1    &kp F2   &kp F3        &kp F4        &kp F5            &kp F6    &kp F7    &kp F8         &kp F9    &kp F10       &kp BSPC            &none     
     &kp TILDE  &none     &none    &kp C_BRI_UP  &kp C_VOL_UP  &kp INS           &kp LT    &kp GT    &kp DQT        &kp AMPS  &kp AT     &kp F11       &kp F12
-    &kp FSLH   &none     &none    &kp C_BRI_UP  &kp C_VOL_DN  &kp SLCK          &kp LPAR  &kp RPAR  &mt SEMI LS(4) &kp PIPE  &kp DLLR   &kp K_CMENU   &kp ENTER 
+    &kp FSLH   &none     &none    &kp C_BRI_UP  &kp C_VOL_DN  &kp SLCK          &kp LPAR  &kp RPAR  &kp SEMI       &kp PIPE  &kp DLLR   &kp K_CMENU   &kp ENTER 
     &kp CAPS   &none     &none    &none         &none         &kp PSCRN         &kp LBKT  &kp RBKT  &kp COLON      &kp HASH  &kp QMARK  &kp PG_UP 
     &kp RCTRL  &kp RALT  &kp DEL  &mo FNL              &sk LCMD                     &kp RSHIFT      &kp SQT        &kp CARET &kp HOME   &kp PG_DN     &kp END	
 	>;
 
-    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 		
 		mod_layer {
