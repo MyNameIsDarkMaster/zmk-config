@@ -98,7 +98,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	leds {
 		compatible = "gpio-leds";
 		blue_led: led_0 {
-			gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio0 26  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 			label = "Blue LED";
 		};
 	};
