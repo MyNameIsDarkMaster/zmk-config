@@ -20,7 +20,7 @@
 		zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart;
 		zmk,backlight = &backlight0;
-		zmk,keymap-sensors = &sensors;
+		zmk,keymap-sensors = &r_encoder;
 		zephyr,gpio-leds = &leds;
 		
 	};
