@@ -36,7 +36,7 @@
     &kp BSLH   &kp A     &kp S     &kp D     &kp F     &kp G             &kp H      &kp J   &kp K      &kp L     &kp SEMI   &kp SQT    &kp ENTER 
     &kp TAB    &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp UP
     &kp LCTRL  &kp LALT  &kp DEL   &mo FNL      &kp LSHIFT                   &kp SPACE    &kp LBKT   &kp RBKT  &kp LEFT   &kp DOWN   &kp RIGHT	
-	>
+	>;
 	
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
