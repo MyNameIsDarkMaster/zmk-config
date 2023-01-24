@@ -20,6 +20,7 @@
 		zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart;
 		zmk,backlight = &backlight0;
+		zmk,battery	= &vbatt;
 		
 	};
 		sensors {
@@ -75,7 +76,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
         label = "R_ENCODER";
         a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <1>;
+        resolution = <2>;
     };
 	
     backlight0: pwmleds {
@@ -112,8 +113,8 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
 		io-channels = <&adc 3>;
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 820000)>;
+		output-ohms = <680000>;
+		full-ohms = <(680000 + 300000)>;
 	};
 	
 };
