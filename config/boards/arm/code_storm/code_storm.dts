@@ -20,8 +20,7 @@
 		zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart;
 		zmk,backlight = &backlight0;
-		zmk,battery	= &vbatt;
-		
+		zmk,battery = &vbatt;
 	};
 		sensors {
 		compatible = "zmk,keymap-sensors";
@@ -109,7 +108,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	};
 
 
-	vbatt {
+	 vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
 		io-channels = <&adc 3>;
