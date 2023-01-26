@@ -50,11 +50,11 @@
 // |  RCTRL  |  RALT   |   DEL   |    FN   |       CMD(s)      |       |       RSHIFT      |    '    |    ^    |   HOME  | PG_DOWN |   END   |
 
             bindings = <
- &kp C_AL_COFFEE  &kp F1    &kp F2   &kp F3        &kp F4        &kp F5            &kp F6    &kp F7    &kp F8         &kp F9    &kp F10       &kp BSPC            &none     
+    &kp ESC    &kp F1    &kp F2   &kp F3        &kp F4        &kp F5            &kp F6    &kp F7    &kp F8         &kp F9    &kp F10       &kp BSPC            &none     
     &kp TILDE  &none     &none    &kp C_BRI_UP  &kp C_VOL_UP  &kp INS           &kp LT    &kp GT    &kp DQT        &kp AMPS  &kp AT     &kp F11       &kp F12
     &kp FSLH   &none     &none    &kp C_BRI_DN  &kp C_VOL_DN  &kp SLCK          &kp LPAR  &kp RPAR  &kp SEMI       &kp PIPE  &kp DLLR   &kp K_CMENU   &kp ENTER 
     &kp CAPS   &none     &none    &mo MDL       &none         &kp PSCRN         &kp LBKT  &kp RBKT  &kp COLON      &kp HASH  &kp QMARK  &kp PG_UP 
-    &kp RCTRL  &kp RALT  &kp DEL  &mo FNL              &sk LCMD                     &kp RSHIFT      &kp SQT        &kp CARET &kp HOME   &kp PG_DN     &kp END	
+    &kp RCTRL  &kp RALT  &kp DEL  &mo FNL              &kp LCMD                     &kp RSHIFT      &kp SQT        &kp CARET &kp HOME   &kp PG_DN     &kp END	
 	>;
 
     sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -76,7 +76,7 @@
     &bootloader  &none         &bt BT_CLR    &none             &out OUT_TOG                          &none    &none &none &none &none &none  	
 	>;
 
-//   sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+//   sensor-bindings = <&inc_dec_krp C_VOL_UP C_VOL_DN>;
                 };
         };
 };
