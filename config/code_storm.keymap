@@ -76,7 +76,7 @@
     &bl BL_CYCLE &none         &none         &none         &none         &bl BL_INC              &none &none  &none    &none    &none &none &none  
     &bl BL_TOG   &none         &none         &none         &none         &bl BL_DEC              &none &none  &none    &none    &none &none &none  
     &none        &none         &none         &none         &none         &none                   &none &none  &none    &none    &none &none  
-    &bootloader  &none         &bt BT_CLR    &none             &out OUT_TOG                         &none     &lt GML  &lt DEF  &none &none &none  	
+    &bootloader  &none         &bt BT_CLR    &none             &out OUT_TOG                         &none     &to GML  &to DEF  &none &none &none  	
 	>;
 
 //   sensor-bindings = <&inc_dec_krp C_VOL_UP C_VOL_DN>;
@@ -91,7 +91,7 @@
 // |  LCTRL  |   FN    |   DEL   |   LALT  |       SPACE       |       |       SPACE       |    [    |    ]    |   LEFT  |   DOWN  |  RIGHT  |
 
             bindings = <
-    &kp ESC     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5            &kp N6     &kp N7  &kp N8     &kp N9    &kp N0           &kp BSPC       &lt DEF     
+    &kp ESC     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5            &kp N6     &kp N7  &kp N8     &kp N9    &kp N0           &kp BSPC       &to DEF     
     &kp TAB     &kp Q     &kp W     &kp E     &kp R     &kp T             &kp Y      &kp U   &kp I      &kp O     &kp P      &kp MINUS  &kp EQUAL
     &kp GRAVE   &kp A     &kp S     &kp D     &kp F     &kp G             &kp H      &kp J   &kp K      &kp L     &kp SEMI   &kp SQT    &kp ENTER 
     &kp LSHIFT  &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp UP
