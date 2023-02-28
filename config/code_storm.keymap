@@ -69,14 +69,14 @@
 // |BL_CYCLE |         |         |         |         |  BL_INC |       |         |         |         |         |         |         |         |
 // |BL_TOG   |         |         |         |         |  BL_DEC |       |         |         |         |         |         |         |         |
 // |         |         |         |         |         |         |       |         |         |         |         |         |         |_________|
-// |  BOOTL  |         | BT_CLR  |         |    TOGGLE OUT     |       |                   |         |         |         |         |         |
+// |  tg_out |         | BT_CLR  |         |      BOOTLDR      |       |                   |         |         |         |         |         |
 
             bindings = <
     &reset       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &none &none  &none    &none    &none    &none      &none     
     &bl BL_CYCLE &none         &none         &none         &none         &bl BL_INC              &none &none  &none    &none    &none &none &none  
     &bl BL_TOG   &none         &none         &none         &none         &bl BL_DEC              &none &none  &none    &none    &none &none &none  
     &none        &none         &none         &none         &none         &none                   &none &none  &none    &none    &none &none  
-    &bootloader  &none         &bt BT_CLR    &none             &out OUT_TOG                         &none     &to GML  &to DEF  &none &none &none  	
+  &out OUT_TOG   &none         &bt BT_CLR    &none             &bootloader                        &none     &to GML  &to DEF  &none &none &none  	
 	>;
 
 //   sensor-bindings = <&inc_dec_krp C_VOL_UP C_VOL_DN>;
