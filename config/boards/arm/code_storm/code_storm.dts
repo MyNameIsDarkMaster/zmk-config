@@ -154,6 +154,10 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 
 &pwm0 {
 	compatible = "nordic,nrf-pwm";
+	status = "okay";
+	pinctrl-0 = <&pwm0_default>;
+	pinctrl-1 = <&pwm0_sleep>;
+	pinctrl-names = "default", "sleep";
 	reg = <0x4001c000 0x00001000>;
 	label = "PWM_0";
     status = "okay";
