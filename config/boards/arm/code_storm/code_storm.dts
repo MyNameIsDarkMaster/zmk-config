@@ -7,7 +7,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
-
+#include <code_storm_pinctrl.dsti>
 / {
 	model = "code_storm";
 	compatible = "code_storm";
