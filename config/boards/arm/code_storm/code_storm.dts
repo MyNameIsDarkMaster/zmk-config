@@ -78,9 +78,9 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
         resolution = <2>;
     };
 	
-    backlight0: pwmleds {
-		compatible = "pwm-leds";
-		label = "Backlight LEDs";
+	backlight0: pwmleds {
+    compatible = "pwm-leds";
+    label = "Backlight LEDs";
 		pwm_led_0 {
 			pwms = <&pwm0 24>; /* LED 1 */
 		};
