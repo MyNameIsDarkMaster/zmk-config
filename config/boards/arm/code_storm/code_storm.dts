@@ -81,18 +81,10 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	backlight0: pwmleds {
     compatible = "pwm-leds";
     label = "Backlight LEDs";
-		pwm_led0: pwm_led_0 {
-			pwms = <&pwm0 24 PWM_POLARITY_NORMAL>; /* LED 1 */
-		};
-		pwm_led1: pwm_led_1 {
-			pwms = <&pwm0 15 PWM_POLARITY_NORMAL>; /* LED 2 */
-		};
-		pwm_led2: pwm_led_2 {
-			pwms = <&pwm0 27 PWM_POLARITY_NORMAL>; /* LED 3 */
-		};
-		pwm_led3: pwm_led_3 {
-			pwms = <&pwm0 25 PWM_POLARITY_NORMAL>; /* LED 4 */
-		};
+	pwms =  <&pwm0 24 PWM_POLARITY_NORMAL>, /* LED 1 */
+			<&pwm0 15 PWM_POLARITY_NORMAL>, /* LED 2 */
+			<&pwm0 27 PWM_POLARITY_NORMAL>, /* LED 3 */
+			<&pwm0 25 PWM_POLARITY_NORMAL>; /* LED 4 */
 	};
 
 	leds {
@@ -118,7 +110,6 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	};
 	
 };
-
 
 &adc {
 	status = "okay";
