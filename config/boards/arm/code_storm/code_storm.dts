@@ -81,17 +81,17 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 	backlight0: pwmleds {
     compatible = "pwm-leds";
     label = "Backlight LEDs";
-		pwm_led_0 {
-			pwms = <&pwm0 24>; /* LED 1 */
+		pwm_led0: pwm_led_0 {
+			pwms = <&pwm0 24 PWM_POLARITY_NORMAL>; /* LED 1 */
 		};
-		pwm_led_1 {
-			pwms = <&pwm0 15>; /* LED 2 */
+		pwm_led1: pwm_led_1 {
+			pwms = <&pwm0 15 PWM_POLARITY_NORMAL>; /* LED 2 */
 		};
-		pwm_led_2 {
-			pwms = <&pwm0 27>; /* LED 3 */
+		pwm_led2: pwm_led_2 {
+			pwms = <&pwm0 27 PWM_POLARITY_NORMAL>; /* LED 3 */
 		};
-		pwm_led_3 {
-			pwms = <&pwm0 25>; /* LED 4 */
+		pwm_led3: pwm_led_3 {
+			pwms = <&pwm0 25 PWM_POLARITY_NORMAL>; /* LED 4 */
 		};
 	};
 
@@ -141,19 +141,21 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 };
 
 &pwm0 {
+	compatible = "nordic,nrf-pwm";
+	reg = <0x4001c000 0x00001000>;
+	label = "PWM_0";
     status = "okay";
     ch0-pin = <24>;
 	ch1-pin = <15>;
 	ch2-pin = <27>;
 	ch3-pin = <25>;
-    /* ch0-inverted; */
 };
 
 &usbd {
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
         compatible = "zephyr,cdc-acm-uart";
-        label = "CDC_ACM_0";
+    	label = "CDC_ACM_0";
     };
 };
 
