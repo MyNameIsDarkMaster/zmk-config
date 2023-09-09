@@ -93,7 +93,7 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
             pwms = <&pwm0 27>;
             status = "okay";
 		};
-		pwm_led2: pwm_led_2 {
+		pwm_led3: pwm_led_3 {
             pwms = <&pwm0 25>;
             status = "okay";
 		};
