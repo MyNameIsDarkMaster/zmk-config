@@ -12,6 +12,13 @@
 	model = "code_storm";
 	compatible = "code_storm";
 
+	aliases {
+    pwm_led0 = &pwm_led0;
+    pwm_led1 = &pwm_led1;
+    pwm_led2 = &pwm_led2;
+	pwm_led3 = &pwm_led3;
+	};
+
 	chosen {
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
@@ -121,12 +128,6 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 		status = "okay";
 	};
 	
-};
-aliases {
-    pwm_led0 = &pwm_led0;
-    pwm_led1 = &pwm_led1;
-    pwm_led2 = &pwm_led2;
-	pwm_led3 = &pwm_led3;
 };
 
 &adc {
