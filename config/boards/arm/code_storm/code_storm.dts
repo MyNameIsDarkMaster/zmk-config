@@ -7,7 +7,6 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <code_storm_pinctrl.dsti>
 / {
 	model = "code_storm";
 	compatible = "code_storm";
@@ -150,6 +149,22 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
 
 &r_encoder {
     status = "okay";
+};
+
+&pinctrl {
+    pwm0_default: pwm0_default {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 17)>;
+			nordic,invert;
+		};
+	};
+
+	pwm0_sleep: pwm0_sleep {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 17)>;
+			low-power-enable;
+		};
+	};
 };
 
 &pwm0 {
