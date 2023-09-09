@@ -17,6 +17,8 @@
     pwmled1 = &pwmled1;
     pwmled2 = &pwmled2;
 	pwmled3 = &pwmled3;
+	blueled = &blueled;
+	greenled = &greenled;
 	};
 
 	chosen {
@@ -89,30 +91,30 @@ RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)       RC(4,5)                  RC(4,6)      R
     compatible = "pwm-leds";
     label = "Backlight LEDs";
 	    pwmled0: pwm_led_0 {
-            pwms = <&pwm0 24>;
+            pwms = <&pwm0 24 PWM_POLARITY_NORMAL>;
             status = "okay";
         };
         pwmled1: pwm_led_1 {
-            pwms = <&pwm0 15>;
+            pwms = <&pwm0 15 PWM_POLARITY_NORMAL>;
             status = "okay";
         };
         pwmled2: pwm_led_2 {
-            pwms = <&pwm0 27>;
+            pwms = <&pwm0 27 PWM_POLARITY_NORMAL>;
             status = "okay";
 		};
 		pwmled3: pwm_led_3 {
-            pwms = <&pwm0 25>;
+            pwms = <&pwm0 25 PWM_POLARITY_NORMAL>;
             status = "okay";
 		};
 	};
 
 	leds {
 		compatible = "gpio-leds";
-		blue_led: led_0 {
+		blueled: led_0 {
 			gpios = <&gpio0 20  GPIO_ACTIVE_HIGH>;
 			label = "Blue LED";
 		};
-		green_led: led_1 {
+		greenled: led_1 {
 			gpios = <&gpio0 26  GPIO_ACTIVE_HIGH>;
 			label = "Green LED";
 		};
